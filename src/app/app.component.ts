@@ -61,4 +61,7 @@ export class AppComponent {
   home(){
     this.router.navigate(['home'])
   }
+  payment(){
+    this.router.navigate(['payment']);
+  }
 }

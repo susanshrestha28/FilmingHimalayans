@@ -17,6 +17,7 @@ import { AngularFireStorageModule} from 'angularfire2/storage';
 import { AngularFireModule } from 'angularfire2';
 import {fireconfig} from '../app/app.firebase.config'
 import { LeafletModule } from '@asymmetrik/angular2-leaflet';
+import {PayPal} from '@ionic-native/paypal/ngx';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -30,6 +31,7 @@ firebase.initializeApp(fireconfig);
     StatusBar,
     SplashScreen,
     Geolocation,
+    PayPal,
     FileTransfer,
     File,
     FileChooser,FilePath,
