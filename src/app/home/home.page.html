@@ -1,14 +1,52 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
+
+<ion-header class="navbar" id="ion-header" no-border>
+  <ion-menu-button class="menubutton"></ion-menu-button>
+  <div>
+    <img src="../../assets/homeimage/cropped-filming-himalaya-logo.png" class="logo" id="logo">
+    <p class="navdis" id="navdis">Cherish Lifelong Experiences</p>
+     <ion-searchbar placeholder="Dare to travel" id="searchbar"></ion-searchbar>
+  </div>
 </ion-header>
 
-<ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+<ion-content [scrollEvents]="true" (ionScroll)="changeCss($event)"> 
+    <ion-fab></ion-fab>
+  <img src="../../assets/homeimage/avatar.jpg" class="treker" id="treker">
+  <div>
+    <p style="text-align: left;color:blcak;font-family:'Poppins';font-weight:400;font-size:24px;margin-top:5px;margin-left:30px">Howdy Susan</p>
+  <p style="text-align:left;color:black;font-family:'Poppins';font-weight:400;font-size:24px;margin-top:-30px;margin-left:30px"> What do you want to do?</p>
   </div>
+  <p style="text-align: center;color:#dd3333;font-family:'Poppins';font-weight:600;font-size:39px;margin-top:5px;margin-bottom:10px">Best Deals 2019</p>
+  
+  <ion-slides slidesPerView="30" pager="true"> 
+      <ion-slide class="slide1">
+        <img src="../../assets/homeimage/Mt1.jpg" >
+      </ion-slide>
+      <ion-slide class="slide2" >
+          <img src="../../assets/homeimage/Mt2.jpg" >
+        </ion-slide>
+        <ion-slide class="slide2">
+            <img src="../../assets/homeimage/Mt3.jpg" >
+          </ion-slide>
+    </ion-slides>
+
+  <diV class="image">
+      <h2 style="position:absolute;margin-top:45%;margin-left:21%;font-size: 28px;font-weight: 300;color:white">Mountaineering</h2>
+   <img src="../../assets/homeimage/mountaineering.jpg" (click)="mountlink()">
+  </diV>
+  <diV class="image">
+      <h2 style="position:absolute;margin-top:45%;margin-left:32%;font-size: 28px;font-weight: 300;color:white">Trekking</h2>
+   <img src="../../assets/homeimage/Webp.net-resizeimage (16).jpg" >
+  </diV>
+  <diV class="image">
+      <h2 style="position:absolute;margin-top:45%;margin-left:40%;font-size: 28px;font-weight: 300;color:white">Tour</h2>
+   <img src="../../assets/homeimage/trekking.jpg" >
+  </diV>
+  <div style="height:50px;"></div>
 </ion-content>
+<!--
+<ion-tab-bar class="my-custom-tab-bar"> 
+    <ion-tab-button ><ion-icon name="clipboard"></ion-icon><ion-label>Blog</ion-label></ion-tab-button>
+    <ion-tab-button  style="background-color:#1d2951;color:white;border-radius:10px  "><ion-icon name="home"></ion-icon><ion-label>Home</ion-label></ion-tab-button>
+    <ion-tab-button (click)="map()"><ion-icon name="map"></ion-icon><ion-label>Map</ion-label></ion-tab-button>
+    <ion-tab-button (click)="Chat()"><ion-icon name="chatbubbles"></ion-icon><ion-label>Chat</ion-label></ion-tab-button>
+  </ion-tab-bar>-->

@@ -1,0 +1,23 @@
+ion-tab-bar.my-custom-tab-bar {
+    padding:0;
+    position: fixed;
+    height:50px;
+    bottom: 0;
+    width: 100%;
+    z-index:999;
+   --background: rgba(0,0 ,0, 0.2);
+  // --background:transparent
+    ion-tab-button {
+      --background: transparent;
+      color:#202833;
+      font-family: Poppins;
+      font-weight: 600;
+      font-size: 14px;
+    }
+  }
+  ion-slides{
+    padding:0px 30px;
+}
+ion-slide{
+    padding:10px;
+}

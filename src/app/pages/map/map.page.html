@@ -1,0 +1,34 @@
+<ion-header style="background-color: #202833;z-index:1200">
+        <ion-back-button style="float:left;color:white;"></ion-back-button>
+        <h2 style="font-family:Poppins;color:white">Annapurna Circuit</h2>
+</ion-header>
+<div>
+        <div id="map" style="width: 100%; height:470px;margin-top:-200px;position:relative"></div>
+</div>
+<div style="margin-top:20px">
+<ion-item>
+        <ion-label>Route1</ion-label>
+        <ion-checkbox  [(ngModel)]="route1" (click)="Route1(route1)"></ion-checkbox>
+</ion-item>
+<ion-item>
+        <ion-label>Route2</ion-label>
+        <ion-checkbox [(ngModel)]="route2" (click)="Route1(route2)"></ion-checkbox>
+</ion-item>
+<ion-item>
+        <ion-label>Route3</ion-label>
+        <ion-checkbox [(ngModel)]="route3" (click)="Route1(route3)"></ion-checkbox>
+</ion-item>
+</div>
+<div style="height:350px;">
+    <ion-row style="margin-left: 20px;">
+        <h1 id="details1" style="font-family: Poppins">Pokhara</h1>
+        <button style="font-family:Poppins;color:white;background-color:#dd3333;height:40px;margin-left:5%;margin-top:10px; border-radius:10px" id="details2">1400m</button>
+        <ion-icon name="locate" style="font-size: 30px;margin-left:20%;margin-top: 20px;" (click)="track()"></ion-icon>
+    </ion-row>
+</div>
+
+<!--<ion-tab-bar class="my-custom-tab-bar"> 
+        <ion-tab-button >Prev.</ion-tab-button>
+        <ion-tab-button (click)="navigate()">Show Map</ion-tab-button>
+        <ion-tab-button (click)="next()">Next</ion-tab-button>
+      </ion-tab-bar> -->

@@ -1,1 +1,65 @@
+ion-tab-bar.my-custom-tab-bar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+   --background: rgba(0,0 ,0, 0.2);
+  // --background:transparent
+    ion-tab-button {
+      --background: transparent;
+      color:#1d2951;
+    }
+  }
+  ion-slides{
+    padding:0px 30px;
+}
+ion-slide{
+    padding:10px;
+}
+.slide1{
+  margin-left:0%;
+}
+.navbar{
+  
+    width:100%;
+    height:200px;
+    background: rgb(241,241,241);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(44,111,201,1) 58%, rgba(32,40,51,1) 100%);
+    
+}
+.logo{
+    display:block;
+  margin: auto;
+  padding-top:10%;
+}
+.navdis{
+    color:white;
+    font-family:'Kaushan Script';
+    font-weight: 200;
+    font-size:24px;
+    text-align:center;
+   
+}
+.main{
+    
+}
 
+ .image{
+     width:100%;
+     margin-top:3%;
+ }
+ .menubutton{
+  z-index: 4;
+  position:fixed;
+  color:white;
+}
+.treker{
+  margin-top:50px;
+  margin-left:30px;
+  width:80px;
+  height:80px;
+  border-radius:50px;
+  border:1px solid black;
+}
+.slide1{
+
+}
