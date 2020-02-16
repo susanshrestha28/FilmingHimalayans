@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 import { PayPal, PayPalPayment, PayPalConfiguration } from '@ionic-native/paypal/ngx';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-payment',
   templateUrl: './payment.page.html',
@@ -9,9 +10,14 @@ export class PaymentPage implements OnInit {
   paymentAmount: string = '3.33';
   currency: string = 'USD';
   currencyIcon: string = '$';
-  constructor(private payPal: PayPal) { }
+  routes =['annapurna','everest'];
+  rates = [2000,5000];
+  rate :any;
+  constructor(private payPal: PayPal,public router:Router) { }
 
   ngOnInit() {
+   let val = window.localStorage.getItem('value');
+  this.paymentvalue(val);
   }
   payWithPaypal() {
     console.log("Pay ????");
@@ -24,7 +30,7 @@ export class PaymentPage implements OnInit {
         // Only needed if you get an "Internal Service Error" after PayPal login!
         //payPalShippingAddressOption: 2 // PayPalShippingAddressOptionPayPal
       })).then(() => {
-        let payment = new PayPalPayment(this.paymentAmount, this.currency, 'Description', 'sale');
+        let payment = new PayPalPayment(this.rate, this.currency, 'Description', 'sale');
         this.payPal.renderSinglePaymentUI(payment).then((res) => {
           console.log(res);
           // Successfully paid
@@ -56,4 +62,21 @@ export class PaymentPage implements OnInit {
       // Error in initialization, maybe PayPal isn't supported or something else
     });
   }
+  paymentvalue(value){ 
+   for(var j=0;j<this.routes.length;j++){
+     console.log(value)
+     console.log(this.routes[j])
+     if(value === this.routes[j]){
+       let rr = this.rates[j];
+       this.rate = rr;
+       console.log(this.rate)
+       document.getElementById('rate').innerHTML = this.rate+"$"+"   "+value ;
+   }
+  }
+}
+payWithPaypal1(){
+  alert("Your payment has been made,Thank you")
+  window.localStorage.setItem("accesstoken","#!!$%5678SSSs");
+  this.router.navigate(['booknow']);
+} 
 }

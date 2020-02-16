@@ -1,0 +1,22 @@
+.splash{
+    background-color: #000;
+    width:100%;
+    height: 100%;
+}
+.image {
+    position: relative;
+    border-radius:50%;
+    background: url('../../../assets/homeimage/splash.jpg') no-repeat transparent;
+    background-size: cover;
+    height:240px;
+    width:240px;
+    margin-left:16.67%;
+    margin-top:28%;
+    background-repeat: repeat-x;
+    animation: animatedBackground 10s linear infinite;
+  }
+
+  @keyframes animatedBackground {
+    from { background-position: 0 0; }
+    to { background-position: 100% 0; }
+  }

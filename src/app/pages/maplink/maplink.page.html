@@ -1,15 +1,50 @@
-<ion-header style="background-color:#1d252f;color:white"> 
-  <div>
+<ion-header > 
+  <ion-toolbar color="dark">
   <ion-row>
-    <ion-back-button></ion-back-button>
+    <button style="outline:0;background-color:transparent;color:white;font-size: 18px;font-weight: 400"><ion-icon name="md-arrow-back" (click)="back()"></ion-icon></button>
     <ion-title>Select map to downlaod</ion-title>
   </ion-row>
-</div>
+</ion-toolbar>
 </ion-header>
 
-<ion-content>
+  <div style="top:50px;">
+  <div style="position:absolute">
+   <ion-col>
+      
+     <div class="button1">
+        <button style="background-color: transparent" (click)="select(1)">Upper Dolpo Region</button>
+     </div>
+      <div class="button2">
+        <button  style="background-color: transparent">Upper Mustang Region</button>
+      </div >
+       <div  class="button3">
+        <button  style="background-color: transparent" (click)="select(3)">Manaslu Region</button>
+       </div>
+        <div class="button4">
+        <button  style="background-color: transparent"  (click)="select(4)">Annapurna Region</button>
+        </div>
+       <div class="button5">
+        <button  style="background-color: transparent" (click)="select(5)">Langtang Region</button>
+       </div>
+      <div class="button6">
+        <button  style="background-color: transparent" (click)="select(6)">Everest Region</button>
+      </div>
+    </ion-col>
+  </div>
+  <ion-img src="../../../assets/homeimage/Group 2.png" padding="20px">
+ 
+  </ion-img>
+</div>
+<div class="progress-outer">
+  <div class="progress-inner" [style.width]="progress + '%'" id="progressbar">
+      {{this.progress}}%
+  </div>
+</div>
+  <button (click)="download()"  id="downloadbtn" style="height:40px;color:white">{{this.value}} Download</button>
+
+<!--<ion-content>
 <ion-button (click)="Annapurna()">Annapurna ckt offline map</ion-button>
 <ion-button>... Mountaineering offline map</ion-button>
 <ion-button>... Mountaineering offline map</ion-button>
 <ion-button (click)="download()">Download Map</ion-button>
-</ion-content>
+</ion-content>-->

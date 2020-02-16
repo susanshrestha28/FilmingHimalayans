@@ -1,0 +1,121 @@
+<ion-header class="header" >
+  <div style="margin-top:2%;">
+    <ion-row>
+        <ion-back-button class="back-button"></ion-back-button>
+    <ion-title style="text-align:center;margin-left:-5%">Trekking</ion-title>
+  </ion-row>
+</div>
+</ion-header>
+
+<ion-content color="dark">
+<div>
+  <h2 style="text-align: left ;margin-left:20px;font-size:20px;;font-weight:lighter">Annapurna Trekking</h2>
+ 
+    <ion-slides slidesPerView="30" [options]="slideOpts"> 
+      <ion-slide class="slide1" (click)="annapurna()">
+        <img src="../../../assets/trekking/annapurna-circuit-trek-1024x768.jpg" >
+        <button class="button1">Annapurna Circuit</button>
+      </ion-slide>
+      <ion-slide class="slide2" (click)="ghorepani()">
+          <img src="../../../assets/trekking/ghorepani.jpg" >
+          <button class="button1">Ghorepani</button>
+        </ion-slide>
+        <ion-slide class="slide2" (click)="mardi()">
+            <img src="../../../assets/trekking/mardi.jpg" >
+            <button class="button1">
+              <p>Mardi</p>
+            </button>
+          </ion-slide>
+          <ion-slide class="slide2" (click)="narphu()">
+            <img src="../../../assets/trekking/nar-phu-valley-trek.jpg" >
+            <button class="button1">Nar Phu Valley</button>
+          </ion-slide>
+          <ion-slide class="slide2" (click)="ABCC()">
+            <img src="../../../assets/trekking/annapurna-base-camp-trek-1024x768.jpg" >
+            <button class="button1">Annapurna Base Camp</button>
+          </ion-slide>
+    </ion-slides>
+
+</div>
+
+<div style="padding-top:10%">
+    <h2 style="text-align: left ;margin-left:20px;font-size:20px;;font-weight:lighter">Camping Trek</h2>
+   
+      <ion-slides slidesPerView="30" [options]="slideOpts"> 
+        <ion-slide class="slide1" (click)="narphu()">
+          <img src="../../../assets/homeimage/Mt2.1.jpg" >
+          <button class="button1">Nar phu Valley</button>
+        </ion-slide>
+        
+      </ion-slides>
+  
+  </div>
+  <div style="padding-top:10%">
+      <h2 style="text-align: left ;margin-left:20px;font-size:20px;;font-weight:lighter">Everest Region Trek</h2>
+     
+        <ion-slides slidesPerView="30" [options]="slideOpts"> 
+          <ion-slide class="slide1" (click)="ranjo()">
+            <img src="../../../assets/homeimage/Mt3.1.jpg" >
+            <button class="button1">Renjo la Pass</button>
+          </ion-slide>
+          <ion-slide class="slide2" (click)="gokyo()">
+              <img src="../../../assets/homeimage/Mt3.2.jpg" >
+              <button class="button1">Gokyo Lake</button>
+            </ion-slide>
+            <ion-slide class="slide2" (click)="everest()">
+                <img src="../../../assets/homeimage/Mt3.3.jpg" >
+                <button class="button1">Everest Base Camp</button>
+              </ion-slide>
+        </ion-slides>
+    
+    </div>
+
+    <div style="padding-top:10%">
+        <h2 style="text-align: left ;margin-left:20px;font-size:20px;;font-weight:lighter">Isolated Trek</h2>
+       
+          <ion-slides slidesPerView="30" [options]="slideOpts"> 
+            <ion-slide class="slide1" (click)="tusum()">
+              <img src="../../../assets/homeimage/Mt4.1.jpg" >
+              <button class="button1">Tusum Valley</button>
+            </ion-slide>
+            <ion-slide class="slide2" (click)="rol()">
+                <img src="../../../assets/homeimage/Mt4.2.jpg" >
+                <button class="button1">Rolwaling Valley</button>
+              </ion-slide>
+              <ion-slide class="slide2" (click)="narphu()">
+                  <img src="../../../assets/homeimage/Mt4.3.jpg" >
+                  <button class="button1">Nar Phu Valley</button>
+                </ion-slide>
+    
+          <ion-slide class="slide2" (click)="ganesh()">
+              <img src="../../../assets/homeimage/Mt4.4.jpg" >
+              <button class="button1">Ganesh Himal</button>
+            </ion-slide>
+   </ion-slides>
+      
+      </div>
+
+      <div style="padding-top:10%">
+          <h2 style="text-align: left ;margin-left:20px;font-size:20px;;font-weight:lighter">Langtang Trek</h2>
+         
+            <ion-slides slidesPerView="30" [options]="slideOpts"> 
+              <ion-slide class="slide1" (click)="langtang()">
+                <img src="../../../assets/homeimage/Mt5.1.jpg"  >
+                <button class="button1">Langtang trek</button>
+              </ion-slide>
+            </ion-slides>
+        
+        </div>
+
+        <div style="padding-top:10%">
+            <h2 style="text-align: left ;margin-left:20px;font-size:20px;;font-weight:lighter">Mustang</h2>
+           
+              <ion-slides slidesPerView="30" [options]="slideOpts"> 
+                <ion-slide class="slide1" (click)="mustang()">
+                  <img src="../../../assets/homeimage/Mt3.3.jpg" >
+                  <button class="button1">Mustang Trek</button>
+                </ion-slide>
+              </ion-slides>
+          
+          </div>
+</ion-content>

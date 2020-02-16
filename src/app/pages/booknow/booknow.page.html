@@ -1,0 +1,37 @@
+<ion-header >
+  <ion-toolbar color="primary">
+    <ion-row>
+    <ion-back-button></ion-back-button>
+    <ion-title style="font-family: poppins">Book Now</ion-title>
+  </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<p style="font-weight: bold;font-family: poppins;margin-left:14%;margin-top:10%">
+  Booking for {{this.title}} trekking
+</p>
+<!--<p style="font-family: poppins;margin-left:14%;margin-top:-2%">
+  please select the:
+</p>-->
+<ion-col>
+  <div>
+  <ion-label for="dateofa" style="margin-left:14%">Date of Arrival</ion-label>
+  <ion-input type="date" id="dateofa" [(ngModel)]="user.dateofa" style="background-color:#c4c4c4;height:47px;width:249px;margin-left:18%;margin-top:5px;border-radius:8px "></ion-input>
+</div>
+<div style="margin-top:20px">
+  <ion-label for="dateofd" style="margin-left:14%">Date of Departure</ion-label>
+  <ion-input type="date" id="dateofd" [(ngModel)]="user.dateofd" style="background-color:#c4c4c4;height:47px;width:249px;margin-left:18%;margin-top:5px;border-radius:8px "></ion-input>
+</div>
+<div style="margin-top:20px">
+    <ion-label  style="margin-left:14%">Your Country</ion-label>
+    <ion-input type="text" [(ngModel)]="user.country" style="background-color:#c4c4c4;height:47px;width:249px;margin-left:18%;margin-top:5px;border-radius:8px "></ion-input>
+  </div>
+<div style="margin-top:20px">
+  <ion-label for="countofp" style="margin-left:14%">Number of Guests</ion-label>
+  <ion-input type="number" id="countofp" [(ngModel)]="user.noofg" style="background-color:#c4c4c4;height:47px;width:249px;margin-left:18%;margin-top:5px;border-radius:8px "></ion-input>
+</div>
+
+</ion-col>
+<ion-button (click)="submit(user)" color="danger" style="width:145px;height:45px;margin-left:30%;border-radius:8px;margin-top:30px">Book Now</ion-button>
+</ion-content>

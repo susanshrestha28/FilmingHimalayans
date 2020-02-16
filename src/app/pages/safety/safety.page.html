@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-row>
+        <button style="outline:0;background-color:transparent;color:white;font-size: 18px;font-weight: 400"><ion-icon name="md-arrow-back" (click)="back()"></ion-icon></button>
+    </ion-row>
+    <ion-title>safety</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-button (click)="Download()">Download Image</ion-button>
+<ion-button (click)="View()">View Image</ion-button>
+<img [src]="this.dataurl1">
+
+
+</ion-content>

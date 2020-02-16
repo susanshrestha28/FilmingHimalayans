@@ -1,0 +1,49 @@
+<ion-header style="background-color: #000;z-index:1200">
+  <ion-row>
+  <ion-back-button style="float:left;color:white;"></ion-back-button>
+  <h2 style="font-family:Poppins;color:white;">{{this.region}}</h2>
+  
+</ion-row>
+</ion-header>
+<div style="background-color: black">
+  <div id="map" style="width: 100%; height:500px;margin-top:-200px;position:relative"></div>
+
+<div style="margin-top:0px;background-color: #000">
+<ion-item color="dark" style="border:5px solid gray">
+<ion-label style="font-family: poppins;color:white;">Select Route</ion-label>
+<ion-select multiple="false" cancelText="Nah" okText="Okay!" #c (ionChange)="Route1(c.value)" color="dark">
+<ion-select-option multiple="false" *ngFor="let r of routes;let i = index" [value]="this.routes[i]">{{this.routes[i]}}</ion-select-option>
+</ion-select>
+</ion-item>
+</div>
+<ion-row class="ion-padding" style="" >
+<button style="width:70px;height:70px;outline: none " (click)="Previous(detailofplace)">
+<ion-icon name="arrow-round-back" style="font-size: 25px;color:black" ></ion-icon>      
+</button>  
+<ion-col style="outline: none;color:black ">
+  <h1 id="details1" style="font-family: Poppins;text-align:center;color:white">Pokhara</h1>
+ 
+  <p style="width:70px;text-align:center;margin:0 auto;font-family:Poppins;color:white;background-color:#dd3333;height:30px; border-radius:10px" id="details2">1400m</p>
+
+
+</ion-col>
+<button style="width:70px;height:70px;outline: none  " >
+<ion-icon name="arrow-round-forward" style="color:black;font-size: 25px;" (click)="Next(detailofplace)"></ion-icon>
+</button>
+</ion-row>
+<ion-fab vertical="bottom" horizontal="end" slot="fixed" >
+<ion-fab-button color="warning" size="small">
+ <ion-icon name="arrow-dropup"></ion-icon>
+</ion-fab-button>
+<ion-fab-list side="top">
+<ion-fab-button color="warning" (click)="track()">
+    <ion-icon name="locate" style="color: black"></ion-icon>
+  </ion-fab-button>
+  <ion-fab-button color="warning" (click)="remove()">
+    <ion-icon name="locate" style="color: black"></ion-icon>
+  </ion-fab-button>
+</ion-fab-list>
+
+
+</ion-fab>
+</div>

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'register', pathMatch: 'full' },
   { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
   
   {
@@ -104,6 +104,118 @@ const routes: Routes = [
   {
     path: 'payment',
     loadChildren: () => import('./pages/payment/payment.module').then( m => m.PaymentPageModule)
+  },
+  {
+    path: 'splash',
+    loadChildren: () => import('./pages/splash/splash.module').then( m => m.SplashPageModule)
+  },
+  {
+    path: 'booknow',
+    loadChildren: () => import('./pages/booknow/booknow.module').then( m => m.BooknowPageModule)
+  },
+  {
+    path: 'profile',
+    loadChildren: () => import('./pages/profile/profile.module').then( m => m.ProfilePageModule)
+  },
+  {
+    path: 'mapmanaslu',
+    loadChildren: () => import('./pages/mapmanaslu/mapmanaslu.module').then( m => m.MapmanasluPageModule)
+  },
+  {
+    path: 'maplangtang',
+    loadChildren: () => import('./pages/maplangtang/maplangtang.module').then( m => m.MaplangtangPageModule)
+  },
+  {
+    path: 'mapeverest',
+    loadChildren: () => import('./pages/mapeverest/mapeverest.module').then( m => m.MapeverestPageModule)
+  },
+  {
+    path: 'downloadedmaps',
+    loadChildren: () => import('./pages/downloadedmaps/downloadedmaps.module').then( m => m.DownloadedmapsPageModule)
+  },
+  {
+    path: 'about',
+    loadChildren: () => import('./pages/about/about.module').then( m => m.AboutPageModule)
+  },
+  {
+    path: 'safety',
+    loadChildren: () => import('./pages/safety/safety.module').then( m => m.SafetyPageModule)
+  },
+  {
+    path: 'trekkinglink',
+    loadChildren: () => import('./pages/trekkinglink/trekkinglink.module').then( m => m.TrekkinglinkPageModule)
+  },
+  {
+    path: 'annapurnatrek',
+    loadChildren: () => import('./trekking/annapurna/annapurna.module').then( m => m.AnnapurnaPageModule)
+  },
+  {
+    path: 'mardi',
+    loadChildren: () => import('./trekking/mardi/mardi.module').then( m => m.MardiPageModule)
+  },
+  {
+    path: 'narphu',
+    loadChildren: () => import('./trekking/narphu/narphu.module').then( m => m.NarphuPageModule)
+  },
+  {
+    path: 'abcc',
+    loadChildren: () => import('./trekking/abcc/abcc.module').then( m => m.ABCCPageModule)
+  },
+  {
+    path: 'ranjo',
+    loadChildren: () => import('./trekking/ranjo/ranjo.module').then( m => m.RanjoPageModule)
+  },
+  {
+    path: 'gokyo',
+    loadChildren: () => import('./trekking/gokyo/gokyo.module').then( m => m.GokyoPageModule)
+  },
+  {
+    path: 'tusum',
+    loadChildren: () => import('./trekking/tusum/tusum.module').then( m => m.TusumPageModule)
+  },
+  {
+    path: 'rol',
+    loadChildren: () => import('./trekking/rol/rol.module').then( m => m.RolPageModule)
+  },
+  {
+    path: 'ganeshtrek',
+    loadChildren: () => import('./trekking/ganesh/ganesh.module').then( m => m.GaneshPageModule)
+  },
+  {
+    path: 'langtang',
+    loadChildren: () => import('./trekking/langtang/langtang.module').then( m => m.LangtangPageModule)
+  },
+  {
+    path: 'mustangtrek',
+    loadChildren: () => import('./trekking/mustang/mustang.module').then( m => m.MustangPageModule)
+  },
+  {
+    path: 'annapurna',
+    loadChildren: () => import('./trekking/annapurnatrek/annapurnatrek.module').then( m => m.AnnapurnatrekPageModule)
+  },
+  {
+    path: 'everesttrek',
+    loadChildren: () => import('./trekking/everesttrek/everesttrek.module').then( m => m.EveresttrekPageModule)
+  },
+  {
+    path: 'test',
+    loadChildren: () => import('./pages/test/test.module').then( m => m.TestPageModule)
+  },
+  {
+    path: 'admin',
+    loadChildren: () => import('./pages/admin/admin.module').then( m => m.AdminPageModule)
+  },
+  {
+    path: 'mapdolpo',
+    loadChildren: () => import('./pages/mapdolpo/mapdolpo.module').then( m => m.MapdolpoPageModule)
+  },
+  {
+    path: 'mapktm',
+    loadChildren: () => import('./pages/mapktm/mapktm.module').then( m => m.MapktmPageModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./pages/register/register.module').then( m => m.RegisterPageModule)
   },
 ];
 

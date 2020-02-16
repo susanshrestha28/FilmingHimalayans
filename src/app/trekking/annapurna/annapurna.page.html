@@ -1,0 +1,42 @@
+<ion-header style="background-color:black;height:0px" id="ionheader">
+  <ion-row>
+  <ion-back-button id="backbtn" style="opacity:0;color:white"></ion-back-button>
+  <h2 style="font-weight: 400;color:white" id="headerdis"></h2>
+</ion-row>
+</ion-header>
+
+<div class="header" id="header">
+    <ion-row>
+        <button style="position:absolute;color:black;font-size: 30px;background-color:transparent;margin:5% 0 0 5%;outline: 0" (click)="BackBtn()"><ion-icon name="md-arrow-back"></ion-icon></button>
+    <img src="../../../assets/trekking/ghorepani-poon-hill-trekking-map-300x225.jpg" class="headerimage" (click)="checkmap()">
+    <h2 style="margin-top:-15%;background-color: black;color:white;font-weight: 400;padding:8px 20px 0 20px" (click)="checkmap()">Annapurna Circuit Trek Map</h2>
+        </ion-row>
+        <!--<ion-card style="height:100px;width:80%;margin-left:10%;margin-top:5%">
+            <div class="button1" (click)="RedirectMap()" >
+              <ion-col>
+              <ion-label style="margin-left:30%;font-size:18px">View Map</ion-label>
+              <ion-icon name="md-arrow-forward" style="font-size:20px;margin-left:20%;"></ion-icon>
+            </ion-col>
+          </div>
+          <img src="../../../assets/trekking/nar-phu-valley-trek.jpg">
+        </ion-card>-->
+    </div>
+<ion-content  [scrollEvents]="true" (ionScroll)="changeCss($event)">
+   
+ <!-- <ion-tab-bar style="position:fixed;margin-top:520px;">
+    <ion-tab-button>Book now</ion-tab-button>
+  </ion-tab-bar>-->
+ 
+<!--<ion-button id="close" (click)="close()" style="position:fixed;margin-top:110%;margin-left:100%;">
+  <ion-icon name="close"></ion-icon>
+</ion-button>>-->
+<!--<ion-fab vertical="bottom" horizontal="center" edge="true" slot="fixed">
+<ion-fab-button ><ion-icon name="cash"></ion-icon></ion-fab-button>
+</ion-fab>-->
+  <iframe src="https://www.marveltreks.com/trip/annapurna-circuit-trek/" scrolling="no" id="scroller"   style="height:6900px;width:105%;margin-top:-45rem;overflow-y: scroll;" frameBorder="0">
+</iframe>
+
+</ion-content>
+<ion-list  id="bookbtn" style="position: absolute;top:92%;width:100%;height:8%;background-color: white;padding:2% 15% 2% 15%"  >
+    <button class="button2" (click)="Bookcow()" >BOOK NOW</button>
+   </ion-list>

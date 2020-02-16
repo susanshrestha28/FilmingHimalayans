@@ -2,26 +2,26 @@
   <div style="margin-top:2%;">
     <ion-row>
         <ion-back-button class="back-button"></ion-back-button>
-    <ion-title>Mounteneering</ion-title>
+    <ion-title style="text-align: center;margin-left:-5%">Mounteneering</ion-title>
   </ion-row>
 </div>
 </ion-header>
 
-<ion-content>
+<ion-content color='dark'>
 <div>
-  <h2 style="text-align: left ;margin-left:20px;font-size:20px;">8000M+ Newly opened Mountains</h2>
+  <h2 style="text-align: left ;margin-left:20px;font-size:20px;font-weight:lighter">8000M+ Newly opened Mountains</h2>
  
-    <ion-slides slidesPerView="30"> 
-      <ion-slide class="slide1">
-        <img src="../../../assets/homeimage/Mt1.jpg" (click)="lhotseshar()">
+    <ion-slides slidesPerView="30" [options]="slideOpts"> 
+      <ion-slide class="slide1" (click)="lhotseshar()">
+        <img src="../../../assets/homeimage/Mt1.jpg" >
         <button class="button1">Mt Lhotse</button>
       </ion-slide>
-      <ion-slide class="slide2" >
-          <img src="../../../assets/homeimage/Mt2.jpg" (click)="yalung()">
+      <ion-slide class="slide2" (click)="yalung()">
+          <img src="../../../assets/homeimage/Mt2.jpg" >
           <button class="button1">Mt Yalung Kang</button>
         </ion-slide>
-        <ion-slide class="slide2">
-            <img src="../../../assets/homeimage/Mt3.jpg" (click)="ksouth()">
+        <ion-slide class="slide2" (click)="ksouth()">
+            <img src="../../../assets/homeimage/Mt3.jpg" >
             <button class="button1">
               <p>Mt Kanchenjunga South</p>
             </button>
@@ -31,50 +31,50 @@
 </div>
 
 <div style="padding-top:10%">
-    <h2 style="text-align: left ;margin-left:20px;font-size:20px;">8000M+ Mountains In Nepal</h2>
+    <h2 style="text-align: left ;margin-left:20px;font-size:20px;font-weight:lighter">8000M+ Mountains In Nepal</h2>
    
-      <ion-slides slidesPerView="30"> 
-        <ion-slide class="slide1">
-          <img src="../../../assets/homeimage/Mt2.1.jpg" (click)="anna()">
+      <ion-slides slidesPerView="30" [options]="slideOpts"> 
+        <ion-slide class="slide1" (click)="anna()">
+          <img src="../../../assets/homeimage/Mt2.1.jpg" >
           <button class="button1">Mt Annapurna</button>
         </ion-slide>
-        <ion-slide class="slide2" >
-            <img src="../../../assets/homeimage/MT2.2.jpg" (click)="everest()">
+        <ion-slide class="slide2" (click)="everest()">
+            <img src="../../../assets/homeimage/MT2.2.jpg" >
             <button class="button1">Mt Everest </button>
           </ion-slide>
-          <ion-slide class="slide2">
-              <img src="../../../assets/homeimage/Mt2.3.jpg" (click)="eft()">
+          <ion-slide class="slide2" (click)="eft()">
+              <img src="../../../assets/homeimage/Mt2.3.jpg" >
               <button class="button1">Mt Everest from Tibet</button>
             </ion-slide>
-            <ion-slide class="slide2">
-                <img src="../../../assets/homeimage/Mt2.4.jpg" (click)="lhotse()">
+            <ion-slide class="slide2" (click)="lhotse()">
+                <img src="../../../assets/homeimage/Mt2.4.jpg" >
                 <button class="button1">Mt Lhotse</button>
               </ion-slide>
-              <ion-slide class="slide2">
-                  <img src="../../../assets/homeimage/Mt2.5.jpg" (click)="k()">
+              <ion-slide class="slide2" (click)="k()">
+                  <img src="../../../assets/homeimage/Mt2.5.jpg" >
                   <button class="button1">Mt Kanchenjunga </button>
                 </ion-slide>
-                <ion-slide class="slide2">
-                    <img src="../../../assets/homeimage/Mt2.6.jpg" (click)="manaslu()">
+                <ion-slide class="slide2" (click)="manaslu()">
+                    <img src="../../../assets/homeimage/Mt2.6.jpg" >
                     <button class="button1">Mt Manaslu</button>
                   </ion-slide>
       </ion-slides>
   
   </div>
   <div style="padding-top:10%">
-      <h2 style="text-align: left ;margin-left:20px;font-size:20px;">7000M+ Mountains In Nepal</h2>
+      <h2 style="text-align: left ;margin-left:20px;font-size:20px;font-weight:lighter">7000M+ Mountains In Nepal</h2>
      
-        <ion-slides slidesPerView="30"> 
-          <ion-slide class="slide1">
-            <img src="../../../assets/homeimage/Mt3.1.jpg" (click)="putha()">
+        <ion-slides slidesPerView="30" [options]="slideOpts"> 
+          <ion-slide class="slide1" (click)="putha()">
+            <img src="../../../assets/homeimage/Mt3.1.jpg" >
             <button class="button1">Putha Hiunchuli</button>
           </ion-slide>
-          <ion-slide class="slide2" >
-              <img src="../../../assets/homeimage/Mt3.2.jpg" (click)="pumori()">
+          <ion-slide class="slide2" (click)="pumori()">
+              <img src="../../../assets/homeimage/Mt3.2.jpg" >
               <button class="button1">Mt Pumori</button>
             </ion-slide>
-            <ion-slide class="slide2">
-                <img src="../../../assets/homeimage/Mt3.3.jpg" (click)="ganesh()">
+            <ion-slide class="slide2" (click)="ganesh()">
+                <img src="../../../assets/homeimage/Mt3.3.jpg" >
                 <button class="button1">Mt Ganesh Himal</button>
               </ion-slide>
         </ion-slides>
@@ -82,24 +82,24 @@
     </div>
 
     <div style="padding-top:10%">
-        <h2 style="text-align: left ;margin-left:20px;font-size:20px;">6000M+ Mountains In Nepal</h2>
+        <h2 style="text-align: left ;margin-left:20px;font-size:20px;font-weight:lighter">6000M+ Mountains In Nepal</h2>
        
-          <ion-slides slidesPerView="30"> 
-            <ion-slide class="slide1">
-              <img src="../../../assets/homeimage/Mt4.1.jpg" (click)="lobuche()">
+          <ion-slides slidesPerView="30" [options]="slideOpts"> 
+            <ion-slide class="slide1" (click)="lobuche()">
+              <img src="../../../assets/homeimage/Mt4.1.jpg" >
               <button class="button1">Lobuche Peak</button>
             </ion-slide>
-            <ion-slide class="slide2" >
-                <img src="../../../assets/homeimage/Mt4.2.jpg" (click)="island()">
+            <ion-slide class="slide2" (click)="island()">
+                <img src="../../../assets/homeimage/Mt4.2.jpg" >
                 <button class="button1">Island Peak</button>
               </ion-slide>
-              <ion-slide class="slide2">
-                  <img src="../../../assets/homeimage/Mt4.3.jpg" (click)="ama()">
+              <ion-slide class="slide2" (click)="ama()">
+                  <img src="../../../assets/homeimage/Mt4.3.jpg" >
                   <button class="button1">Mt Ama Dablam</button>
                 </ion-slide>
     
-          <ion-slide class="slide2">
-              <img src="../../../assets/homeimage/Mt4.4.jpg" (click)="pisang()">
+          <ion-slide class="slide2" (click)="pisang()">
+              <img src="../../../assets/homeimage/Mt4.4.jpg" >
               <button class="button1">Pisang Peak</button>
             </ion-slide>
    </ion-slides>
@@ -107,19 +107,19 @@
       </div>
 
       <div style="padding-top:10%">
-          <h2 style="text-align: left ;margin-left:20px;font-size:20px;">5000M+ Mountains In Nepal</h2>
+          <h2 style="text-align: left ;margin-left:20px;font-size:20px;font-weight:lighter">5000M+ Mountains In Nepal</h2>
          
-            <ion-slides slidesPerView="30"> 
-              <ion-slide class="slide1">
-                <img src="../../../assets/homeimage/Mt5.1.jpg" (click)="tent()">
+            <ion-slides slidesPerView="30" [options]="slideOpts"> 
+              <ion-slide class="slide1" (click)="tent()">
+                <img src="../../../assets/homeimage/Mt5.1.jpg"  >
                 <button class="button1">Tent Peak</button>
               </ion-slide>
-              <ion-slide class="slide2" >
-                  <img src="../../../assets/homeimage/Mt5.3.jpg" (click)="paldor()">
+              <ion-slide class="slide2" (click)="paldor()" >
+                  <img src="../../../assets/homeimage/Mt5.3.jpg" >
                   <button class="button1">Paldor Peak</button>
                 </ion-slide>
-                <ion-slide class="slide2">
-                    <img src="../../../assets/homeimage/Mt5.3(1).jpg" (click)="yala()">
+                <ion-slide class="slide2" (click)="yala()">
+                    <img src="../../../assets/homeimage/Mt5.3(1).jpg" >
                     <button class="button1">Yala Peak</button>
                   </ion-slide>
             </ion-slides>
@@ -127,11 +127,11 @@
         </div>
 
         <div style="padding-top:10%">
-            <h2 style="text-align: left ;margin-left:20px;font-size:20px;">Virgin Mountains In Nepal</h2>
+            <h2 style="text-align: left ;margin-left:20px;font-size:20px;font-weight:lighter">Virgin Mountains In Nepal</h2>
            
-              <ion-slides slidesPerView="30"> 
-                <ion-slide class="slide1">
-                  <img src="../../../assets/homeimage/Mt3.3.jpg" (click)="ganesh()">
+              <ion-slides slidesPerView="30" [options]="slideOpts"> 
+                <ion-slide class="slide1" (click)="ganesh()">
+                  <img src="../../../assets/homeimage/Mt3.3.jpg" >
                   <button class="button1">Mt Ganesh Himal</button>
                 </ion-slide>
               </ion-slides>

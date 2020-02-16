@@ -1,6 +1,6 @@
 <ion-app>
     <ion-menu contentId="content" side="start">
-      <ion-header class="header" >
+      <ion-header class="header"  >
         <div >
           <img src="../assets/homeimage/cropped-filming-himalaya-logo.png" class="image">
         </div>
@@ -18,26 +18,27 @@
         </ion-list>
       </ion-content>
     </ion-menu>
-    <ion-fab vertical="bottom" horizontal="start" slot="fixed" >
+  <!--  <ion-fab vertical="bottom" horizontal="start" slot="fixed" >
         <ion-fab-button color="danger" size="small">
-             <ion-icon name="arrow-dropright"></ion-icon>
+             <ion-icon name="arrow-dropup"></ion-icon>
         </ion-fab-button>
-        <ion-fab-list side="end">
-            <ion-fab-button color="medium" (click)="home()">
+        <ion-fab-list side="top">
+            <ion-fab-button color="tertiary"  (click)="home()">
                 <ion-icon name="home"></ion-icon>
               </ion-fab-button>
-          <ion-fab-button color="warning">
+          <ion-fab-button color="warning" >
             <ion-icon name="alert"></ion-icon>
           </ion-fab-button>
-          <ion-fab-button color="tertiary" (click)="maplink()">
+          <ion-fab-button  (click)="maplink()" color="danger">
               <ion-icon name="download"></ion-icon>
           </ion-fab-button>
-          <ion-fab-button color="danger" (click)="payment()">
+          <ion-fab-button  color="medium" (click)="payment()">
             <ion-icon name="logo-usd"></ion-icon>
         </ion-fab-button>
         </ion-fab-list>
         
        
-      </ion-fab>
+      </ion-fab>-->
+
     <ion-router-outlet id="content" main></ion-router-outlet>
   </ion-app>

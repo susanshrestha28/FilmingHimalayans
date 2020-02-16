@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-row>
+      <button style="background-color:transparent;color:white;font-size: 18px;font-weight: 400;outline: 0" (click)="Back()"><ion-icon name="md-arrow-back" ></ion-icon></button>
+    <ion-title>Maps</ion-title>
+  </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ 
+    <ion-list>
+      <ion-item (click)="Annapurna()" id="annapurna" style="color:#dd3333">Annapurna Region</ion-item>
+
+     
+      <ion-item  (click)="Manaslu()" id="manaslu" style="color:#dd3333">Manslu Region</ion-item>
+    
+     
+      <ion-item (click)="Langtang()" id="langtang" style="color:#dd3333">Langtang Region</ion-item>
+
+     <ion-item (click)="Everest()"  id="everest" style="color:#dd3333">Everest Region</ion-item>
+     
+      <ion-item (click)="Dolpo()" id="dolpo" style="color:#dd3333">Dolpo Region</ion-item>
+    </ion-list>
+ 
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" >
+      <ion-fab-button color="warning" size="small" (click)="Download()">
+           <ion-icon name="download"></ion-icon>
+      </ion-fab-button>
+  </ion-fab>
+</ion-content>
+<p style="font-family:poppins">Downloaded Maps are in Green Color</p>

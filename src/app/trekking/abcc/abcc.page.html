@@ -1,0 +1,25 @@
+<ion-header class="header">
+  <div style="margin-top:2%;">
+    <ion-row>
+        <ion-back-button class="back-button"></ion-back-button>
+    <ion-title>Trip Info</ion-title>
+  </ion-row>
+</div>
+</ion-header>
+<ion-content  >
+ <!-- <ion-tab-bar style="position:fixed;margin-top:520px;">
+    <ion-tab-button>Book now</ion-tab-button>
+  </ion-tab-bar>-->
+ <ion-card (click)="book()" id="bookbtn" style="position:fixed;margin-top:90%;margin-left:92%;width:100%;height:11%;background-color:#dd3333;color:white;font-size:22px;font-family: poppins;font-weight: 600;padding-left:10px;padding-top:15px"  >
+ BOOK NOW
+</ion-card>
+<ion-button id="close" (click)="close()" style="position:fixed;margin-top:110%;margin-left:100%;">
+  <ion-icon name="close"></ion-icon>
+</ion-button>>
+<!--<ion-fab vertical="bottom" horizontal="center" edge="true" slot="fixed">
+<ion-fab-button ><ion-icon name="cash"></ion-icon></ion-fab-button>
+</ion-fab>-->
+  <iframe src="https://www.marveltreks.com/trip/annapurna-base-camp-trek/" scrolling="no" id="scroller"   style="height:14000px;width:105%;margin-top:-20rem;overflow-y: scroll;" frameBorder="0">
+</iframe>
+
+</ion-content>

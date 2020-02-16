@@ -1,30 +1,48 @@
-<ion-header style="background-color: #202833;z-index:1200">
+<ion-header style="background-color: #002250;z-index:1200">
+        <ion-row>
         <ion-back-button style="float:left;color:white;"></ion-back-button>
-        <h2 style="font-family:Poppins;color:white">Annapurna Circuit</h2>
+        <h2 style="font-family:Poppins;color:white">{{this.region}}</h2>
+    
+</ion-row>
 </ion-header>
 <div>
-        <div id="map" style="width: 100%; height:470px;margin-top:-200px;position:relative"></div>
-</div>
+        <div id="map" style="width: 100%; height:500px;margin-top:-200px;position:relative"></div>
+       
 <div style="margin-top:20px">
-<ion-item>
-        <ion-label>Route1</ion-label>
-        <ion-checkbox  [(ngModel)]="route1" (click)="Route1(route1)"></ion-checkbox>
-</ion-item>
-<ion-item>
-        <ion-label>Route2</ion-label>
-        <ion-checkbox [(ngModel)]="route2" (click)="Route1(route2)"></ion-checkbox>
-</ion-item>
-<ion-item>
-        <ion-label>Route3</ion-label>
-        <ion-checkbox [(ngModel)]="route3" (click)="Route1(route3)"></ion-checkbox>
+<ion-item >
+  <ion-label style="font-family: poppins;">Select Route</ion-label>
+ <ion-select multiple="false" cancelText="Nah" okText="Okay!" #c (ionChange)="Route1(c.value)" >
+   <ion-select-option multiple="false" *ngFor="let r of routes;let i = index" [value]="this.routes[i]">{{this.routes[i]}}</ion-select-option>
+ </ion-select>
 </ion-item>
 </div>
-<div style="height:350px;">
-    <ion-row style="margin-left: 20px;">
-        <h1 id="details1" style="font-family: Poppins">Pokhara</h1>
-        <button style="font-family:Poppins;color:white;background-color:#dd3333;height:40px;margin-left:5%;margin-top:10px; border-radius:10px" id="details2">1400m</button>
-        <ion-icon name="locate" style="font-size: 30px;margin-left:20%;margin-top: 20px;" (click)="track()"></ion-icon>
-    </ion-row>
+<ion-row class="ion-padding" style="" >
+  <button style="width:70px;height:70px;outline: none " (click)="Previous()">
+  <ion-icon name="arrow-round-back" style="font-size: 25px;color:black" ></ion-icon>      
+  </button>  
+  <ion-col style="outline: none;color:black ">
+        <h1 id="details1" style="font-family: Poppins;text-align:center">Pokhara</h1>
+       
+        <p style="width:70px;text-align:center;margin:0 auto;font-family:Poppins;color:white;background-color:#dd3333;height:30px; border-radius:10px" id="details2">1400m</p>
+        
+    
+    </ion-col>
+  <button style="width:70px;height:70px;outline: none  " >
+    <ion-icon name="arrow-round-forward" style="color:black;font-size: 25px;" (click)="Next()"></ion-icon>
+  </button>
+</ion-row>
+<ion-fab vertical="bottom" horizontal="end" slot="fixed" >
+  <ion-fab-button color="warning" size="small">
+       <ion-icon name="arrow-dropup"></ion-icon>
+  </ion-fab-button>
+  <ion-fab-list side="top">
+      <ion-fab-button color="warning" >
+          <ion-icon name="locate" style="color: black"></ion-icon>
+        </ion-fab-button>
+  </ion-fab-list>
+  
+ 
+</ion-fab>
 </div>
 
 <!--<ion-tab-bar class="my-custom-tab-bar"> 

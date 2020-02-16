@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import {Router} from '@angular/router';
-import { Platform } from '@ionic/angular';
+import { Platform ,ModalController} from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
-
+import {SplashPage} from './pages/splash/splash.page';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -12,8 +12,8 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 export class AppComponent {
   public appPages = [
     {
-      title: 'Safety',
-      url:'/safety',
+      title: 'Home',
+      url:'/home',
       icon: 'home',
     },
     {
@@ -23,26 +23,25 @@ export class AppComponent {
 
     },
     {
-      title: 'Support',
-      url: '/support',
+      title: 'Available Maps',
+      url: '/downloadedmaps',
       icon: 'map',
     },
     {
-      title: 'Feedback',
-      url: '/register',
-      icon: 'cafe '
+      title: 'Download Map',
+      url: '/maplink',
+      icon: 'download'
     },
-    {
-      title: 'Signout',
-      url: '/login',
-      icon: 'cafe '
-    },
+    
+   
   ];
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
-    public router:Router
+    public router:Router,
+    public modalCtrl: ModalController,
+   
   ) {
     this.initializeApp();
   }
@@ -51,8 +50,9 @@ export class AppComponent {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.statusBar.overlaysWebView(false);
-      this.statusBar.backgroundColorByHexString('#1d252f');
+      this.statusBar.backgroundColorByHexString('#000');
       this.splashScreen.hide();
+    
     });
   }
   maplink(){

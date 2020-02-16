@@ -4,49 +4,112 @@
   <div>
     <img src="../../assets/homeimage/cropped-filming-himalaya-logo.png" class="logo" id="logo">
     <p class="navdis" id="navdis">Cherish Lifelong Experiences</p>
-     <ion-searchbar placeholder="Dare to travel" id="searchbar"></ion-searchbar>
+     <ion-searchbar placeholder="Dare to travel" id="searchbar" color="light"></ion-searchbar>
   </div>
 </ion-header>
 
-<ion-content [scrollEvents]="true" (ionScroll)="changeCss($event)"> 
-    <ion-fab></ion-fab>
-  <img src="../../assets/homeimage/avatar.jpg" class="treker" id="treker">
-  <div>
-    <p style="text-align: left;color:blcak;font-family:'Poppins';font-weight:400;font-size:24px;margin-top:5px;margin-left:30px">Howdy Susan</p>
-  <p style="text-align:left;color:black;font-family:'Poppins';font-weight:400;font-size:24px;margin-top:-30px;margin-left:30px"> What do you want to do?</p>
-  </div>
-  <p style="text-align: center;color:#dd3333;font-family:'Poppins';font-weight:600;font-size:39px;margin-top:5px;margin-bottom:10px">Best Deals 2019</p>
+<ion-content [scrollEvents]="true" (ionScroll)="changeCss($event)" color="dark" id="maincontent">
+  <ion-col>
+  <ion-row style="margin-left:10%" (click)="mountlink()">
+
+    <ion-card class="treker" id="treker">
+      <ion-card style="position:absolute;width:100%;height:100px;margin-top:58%">
+          <h1 style="color:black;;font-size: 14px;font-weight: 400;color:white;background-color:rgba(0,0,0,0.5);padding-left: -2%">Mountaineering</h1>
+      </ion-card>
+      <img src="../../assets/mountaineering.svg"  >
+    </ion-card>
+
+    <ion-card class="treker" id="treker1" style="margin-left:15%" (click)="trekkinglink()">
+        <ion-card style="position:absolute;width:100%;height:100px;margin-top:58%">
+            <h1 style="color:black;;font-size: 14px;font-weight: 400;color:white;background-color:rgba(0,0,0,0.5);text-align: center">Trekking</h1>
+        </ion-card>
+        <img src="../../assets/trekking.svg"  >
+      </ion-card>
+  </ion-row>
   
-  <ion-slides slidesPerView="30" pager="true"> 
-      <ion-slide class="slide1">
-        <img src="../../assets/homeimage/Mt1.jpg" >
+  <ion-row style="margin-left:10%">
+      <ion-card class="treker" id="treker">
+        <ion-card style="position:absolute;width:100%;height:100px;margin-top:58%">
+            <h1 style="color:black;;font-size: 14px;font-weight: 400;color:white;background-color:rgba(0,0,0,0.5);text-align: center">Tour</h1>
+        </ion-card>
+        <img src="../../assets/tour.svg"  (click)="profile()">
+      </ion-card>
+  
+      <ion-card class="treker" id="treker1" style="margin-left:15%">
+          <ion-card style="position:absolute;width:100%;height:100px;margin-top:58%">
+              <h1 style="color:black;;font-size: 14px;font-weight: 400;color:white;background-color:rgba(0,0,0,0.5);text-align: center">Filming</h1>
+          </ion-card>
+          <img src="../../assets/polaroid-camera.svg"  (click)="profile()">
+        </ion-card>
+    </ion-row>
+
+    <ion-row style="margin-left:10%" (click)="Downloaded()">
+        <ion-card class="treker" id="treker">
+          <ion-card style="position:absolute;width:100%;height:100px;margin-top:60%">
+              <h1 style="color:black;;font-size: 14px;font-weight: 400;color:white;background-color:rgba(0,0,0,0.5);text-align: center">Map</h1>
+          </ion-card>
+          <img src="../../assets/map.svg"  >
+        </ion-card>
+    
+        <ion-card class="treker" id="treker1" style="margin-left:15%">
+            <ion-card style="position:absolute;width:100%;height:100px;margin-top:60%">
+                <h1 style="color:black;;font-size: 14px;font-weight: 400;color:white;background-color:rgba(0,0,0,0.5);text-align: center">Global</h1>
+            </ion-card>
+            <img src="../../assets/global.svg"  (click)="profile()">
+          </ion-card>
+      </ion-row>
+</ion-col> 
+  <p style="text-align: center;color:#dd3333;font-family:'Poppins';font-weight:600;font-size:39px;margin-top:5px;margin-bottom:10px">Best Deals 2020</p>
+  
+  <ion-slides [options]="slideOpts" slidesPerView="30"  > 
+      <ion-slide class="slide1" (click)="best1(1)">
+        <ion-card style="background-color: white;padding: -10%" > 
+            <img src="../../assets/homeimage/Mt1.jpg" >
+        </ion-card>
+        
+        <button class="button1">Mt Everest Expedition</button>
       </ion-slide>
-      <ion-slide class="slide2" >
-          <img src="../../assets/homeimage/Mt2.jpg" >
+      <ion-slide class="slide2" (click)="best1(2)">
+          <ion-card style="background-color: white;padding: -10%" > 
+              <img src="../../assets/homeimage/Mt2.jpg" >
+          </ion-card>
+          <button class="button1">Everest BaseCamp Trek</button>
         </ion-slide>
-        <ion-slide class="slide2">
-            <img src="../../assets/homeimage/Mt3.jpg" >
+        <ion-slide class="slide2" (click)="best1(3)">
+            <ion-card style="background-color: white;padding: -10%" > 
+                <img src="../../assets/homeimage/Mt3.jpg" >
+            </ion-card>
+            <button class="button1">Tent Peak Climbing</button>
           </ion-slide>
     </ion-slides>
 
-  <diV class="image">
-      <h2 style="position:absolute;margin-top:45%;margin-left:21%;font-size: 28px;font-weight: 300;color:white">Mountaineering</h2>
-   <img src="../../assets/homeimage/mountaineering.jpg" (click)="mountlink()">
+   <!--<diV class="image" (click)="mountlink()">
+    
+     <h2 style="position:absolute;margin-top:45%;margin-left:21%;font-size: 28px;font-weight: 500;color:white;text-shadow: 0px 5px 10px black;">Mountaineering</h2>
+   <img src="../../assets/homeimage/mountaineering.jpg" >
   </diV>
-  <diV class="image">
-      <h2 style="position:absolute;margin-top:45%;margin-left:32%;font-size: 28px;font-weight: 300;color:white">Trekking</h2>
+  <diV class="image" (click)="trekkinglink()">
+      <h2 style="position:absolute;margin-top:45%;margin-left:32%;font-size: 28px;font-weight: 500;color:white;text-shadow: 0px 5px 10px black;">Trekking</h2>
    <img src="../../assets/homeimage/Webp.net-resizeimage (16).jpg" >
-  </diV>
-  <diV class="image">
-      <h2 style="position:absolute;margin-top:45%;margin-left:40%;font-size: 28px;font-weight: 300;color:white">Tour</h2>
-   <img src="../../assets/homeimage/trekking.jpg" >
-  </diV>
-  <div style="height:50px;"></div>
+  </diV>-->
+  
+ 
+ <div style="height:10%;"></div>
 </ion-content>
-<!--
+<ion-card id="showinfo" style="background-color:white ;z-index: 99;height:0px;margin-top: -15px;" >
+<button (click)="Minimize()" style="position:absolute;background-color: #dd3333;color:white;margin-left:93%"><ion-icon name="close"></ion-icon></button>
+<ion-row>
+<img src="../../assets/trekking/ghorepani-poon-hill-trekking-map-300x225.jpg" style="padding:5%;width:100%">
+<button class="button1" style="margin-top:62%;margin-left:5%">{{this.bestdeal}}</button>
+</ion-row>
+<div style="margin-left:5%;font-weight: 400;color:black" id="text1">
+</div>
+<button style="margin-left:60%;color:black;background-color: transparent;font-weight: 800" (click)="naviagteto()">View more...</button>
+</ion-card>
+
 <ion-tab-bar class="my-custom-tab-bar"> 
-    <ion-tab-button ><ion-icon name="clipboard"></ion-icon><ion-label>Blog</ion-label></ion-tab-button>
-    <ion-tab-button  style="background-color:#1d2951;color:white;border-radius:10px  "><ion-icon name="home"></ion-icon><ion-label>Home</ion-label></ion-tab-button>
+    <ion-tab-button (click)="profile()"><ion-icon name="clipboard"></ion-icon><ion-label>Profile</ion-label></ion-tab-button>
+    <ion-tab-button  style="background-color:rgba(255, 255, 255, 0.925);color:#202833;border-radius:15px  "><ion-icon name="home"></ion-icon><ion-label>Home</ion-label></ion-tab-button>
     <ion-tab-button (click)="map()"><ion-icon name="map"></ion-icon><ion-label>Map</ion-label></ion-tab-button>
     <ion-tab-button (click)="Chat()"><ion-icon name="chatbubbles"></ion-icon><ion-label>Chat</ion-label></ion-tab-button>
-  </ion-tab-bar>-->
+  </ion-tab-bar>

@@ -10,6 +10,7 @@ export class AmaPage implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  
   }
 
 }

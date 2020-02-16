@@ -7,7 +7,10 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
   styleUrls: ['./mountlink.page.scss'],
 })
 export class MountlinkPage implements OnInit {
-
+  slideOpts = {
+    initialSlide: 1,
+    speed: 400
+  };
   constructor(  private statusBar: StatusBar,public router:Router) { }
 
   ngOnInit() {
